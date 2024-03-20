@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg');
+    background-size: cover;
+}
+
+.navbar {
+    margin-top: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.myinfo {
+    position: relative;
+    top: 200px;
+    left: 150px;
+    width: 500px;
+    color: white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.73);
+}
+
+.nav-link,
+.nav-item {
+    color: white;
+    margin-left: 20px;
+}
+
+.btn {
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    background: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.holi {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 20px black;
+}
+
+video {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: blur(100px); */
+}
+
+.hue {
+    color: rgb(240, 81, 2);
+    font-weight: bold;
+    animation: hue 5s infinite;
+}
+
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(700deg);
+    }
+}
