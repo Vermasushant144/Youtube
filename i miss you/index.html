@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('The-Best-Ways-to-Respond-to-I-Miss-You-Messages-Texts.jpg.webp'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            text-align: center;
+            color: rgb(213, 12, 12);
+            font-size: large;
+        }
+
+        .typing-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 5s steps(50, end);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .btn button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>
+            <span id="typed-text" class="typing-animation"></span>
+        </h1>
+        <div class="btn">
+            <a href="first.html">
+
+                <button>See it</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to make the text appear as if it's being typed
+        const text = "Why are you More Missing someOne ?";
+        let index = 0;
+        const speed = 100; // Speed in milliseconds between each letter
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("typed-text").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>
