@@ -1,0 +1,86 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 100, 150, 0.5) 30%, transparent 31%),
+        radial-gradient(circle at 75% 80%, rgba(100, 200, 255, 0.5) 30%, transparent 31%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 100, 0.5) 30%, transparent 31%),
+        radial-gradient(circle at 90% 10%, rgba(100, 255, 100, 0.5) 30%, transparent 31%),
+        radial-gradient(circle at 10% 90%, rgba(0, 200, 200, 0.5) 30%, transparent 31%);
+    background-size: cover;
+    overflow: hidden;
+}
+span{
+  color:red;
+  font-size:25px;
+}
+#circle {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFD194, #D1913C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+#circleText {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes zoomOut {
+    from {
+        width: 0;
+        height: 0;
+        font-size: 0;
+    }
+    to {
+        width: 300px;
+        height: 300px;
+        font-size: 1rem;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover, button:focus {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    transform: scale(1.05);
+}
