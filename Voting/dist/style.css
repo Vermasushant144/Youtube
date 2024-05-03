@@ -1,0 +1,505 @@
+a {
+  text-decoration: none;
+}
+.voting-wrapper #content-wrapper {
+  padding: 0;
+}
+.vote-now.btn {
+  display: inline-block;
+  margin: -7em 0 0 7em;
+  vertical-align: top;
+}
+.page-thank-you .vote-now.btn {
+  display: none;
+}
+body.ev-overlay-open {
+  overflow: hidden;
+}
+.ev-wrapper {
+  background: #eee;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  min-height: 450px;
+  padding: 0;
+  position: relative;
+}
+.ev-header {
+  font-weight: bold;
+  padding-top: 1em;
+  text-align: center;
+}
+.ev-header small {
+  color: #666;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.ev-header h2 {
+  background: none;
+  border: none;
+  color: #3e3e3e;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  text-transform: uppercase; 
+}
+.ev-header p {
+  color: #333;
+  font-size: 1.15em;
+  line-height: 1.35;
+  margin: 1em 2em;
+}
+
+ul.ev-user {
+  margin: 0;
+  padding: 1em 0 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+ul.ev-user li {
+  border-radius: 5px 5px 0 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: 1em 0 2em;
+  position: relative;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+  width: 24%;
+}
+ul.ev-user li.active {
+  background: #fff;
+}
+ul.ev-user li.active:before {
+  background: #fff;
+  position: absolute;
+}
+.ev-headshot  {
+  background: url('http://bl.qa.equisearch.com/Portals/13/headshot_bg_white.png') no-repeat 0 0;
+  display: block;
+  height: 170px;
+  margin: 0 auto 0.5em;
+  position: relative;
+  text-align: center;
+  width: 170px;
+}
+li.active .ev-headshot,
+.ev-overlay-content .ev-headshot {
+  background: url('http://bl.qa.equisearch.com/Portals/13/headshot_bg.png') no-repeat 0 0;
+}
+.ev-headshot img {
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+ul.ev-user li h3 {
+  font-size: 1.25em;
+  margin: 0;
+  text-transform: uppercase;
+}
+ul.ev-user li p {
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 0 0 1em;
+}
+ul.ev-user li .ev-voting-launch {
+  position: relative;
+}
+ul.ev-user li .ev-voting-launch span.overlay {
+  background: #0B702D;
+  background: rgba(11,113,45,0.5);
+  border-radius: 2px;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: width 0s ease-in-out;
+  width: 0%;
+  z-index: 1;
+}
+ul.ev-user li .ev-voting-launch.voting-blocked span.overlay {
+  background: #ccc;
+  background: rgba(0,0,0,0.05);
+}
+ul.ev-user li .ev-voting-launch span.text {
+  position: relative;
+  z-index: 2;
+}
+ul.ev-user li.active .ev-voting-launch span.overlay {
+  transition: width 4s ease-in-out;
+  width: 100%;
+}
+body.ev-overlay-open ul.ev-user li.active .ev-voting-launch span.overlay {
+  transition: width 0s ease-in-out;
+  width: 0% !important;
+
+}
+
+ul.ev-content {
+  background: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 1em 0 0;
+  width: 100%;
+}
+ul.ev-content li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ev-content-body {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  overflow: hidden;
+  padding: 1em 0;
+  width: 100%;
+}
+ul.ev-content li.active .ev-content-body {
+  display: block;
+}
+.ev-content-body .ev-video {
+  border-top: 1px solid #eee;
+  clear: both;
+  margin: 1em 0;
+  padding-top: 1em;
+  text-align: center;
+}
+.ev-content-body .ev-video .youtube {
+  margin: 0 auto 4em;
+  position: relative;
+  width: 560px;
+}
+.ev-content-body .ev-video .youtube .circle {
+  background: url('https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png') no-repeat 50% 50%;
+  background-size: 100px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.ev-content-body .ev-video p {
+  margin: 1em 0;
+  text-align: center;
+}
+.ev-content-body .ev-headshot {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+.ev-content-body > h3 {
+  margin: 0;
+}
+.ev-content-body > p:first-of-type {
+  font-size: 0.875em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  text-transform: uppercase;
+}
+.ev-content-body > p {
+  line-height: 1.35;
+  margin: 0.25em 0;
+}
+
+ul.ev-social {
+  background: #eee;
+  float: right;
+  margin: 0;
+  padding: 0 1em 0.15em;
+}
+ul.ev-social li {
+  display: inline-block;
+  list-style: none;
+  max-height: 42px;
+  vertical-align: middle;
+}
+ul.ev-social li h4 {
+  margin: 4px 0 0;
+}
+ul.ev-social li a {
+  display: block;
+  height: 42px;
+  text-indent: -20000px;
+  width: 42px;
+}
+ul.ev-social li.fb a {
+  background: url('http://bl.qa.equisearch.com/Portals/13/social.png') no-repeat -54px 0;
+}
+ul.ev-social li.tw a {
+  background: url('http://bl.qa.equisearch.com/Portals/13/social.png') no-repeat -2px 0;
+}
+ul.ev-social li.gp > div:first-of-type {
+  background: url('http://bl.qa.equisearch.com/Portals/13/social.png') no-repeat -107px 0 !important;
+  height: 42px !important;
+  width: 42px !important;
+}
+ul.ev-social li.gp > div:first-of-type iframe {
+  opacity: 0;
+}
+ul.ev-social li.fb a:hover,
+ul.ev-social li.fb a:active {
+  background: url('http://bl.qa.equisearch.com/Portals/13/social.png') no-repeat -54px -42px;
+}
+ul.ev-social li.tw a:hover,
+ul.ev-social li.tw a:active {
+  background: url('http://bl.qa.equisearch.com/Portals/13/social.png') no-repeat -2px -42px;
+}
+ul.ev-social li.gp > div:first-of-type:hover,
+ul.ev-social li.gp > div:first-of-type:active {
+  background: url('http://bl.qa.equisearch.com/Portals/13/social.png') no-repeat -107px -42px !important;
+}
+
+.ev-overlay {
+  background: #000;
+  background: rgba(0,0,0,0.85);
+  border-radius: 2px;
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.ev-overlay-content {
+  background: #fff;
+  -moz-box-shadow: 1px 1px 10px rgba(180,180,180,0.25);
+  -webkit-box-shadow: 1px 1px 10px rgba(180,180,180,0.25);
+  box-shadow: 1px 1px 10px rgba(180,180,180,0.25);
+  border-radius: 2px;
+  height: auto;
+  left: 50%;
+  margin: 0 0 3em -170px;
+  padding: 1em 0;
+  position: absolute;
+  text-align: center;
+  top: 5em;
+  width: 340px;
+}
+.ev-overlay-content > h3 {
+  color: #333;
+  font-size: 1.75em;
+  margin: 0.5em 0;
+}
+.ev-overlay-content > h3 span {
+  color: #00BD3F;
+  display: block;
+}
+.ev-overlay-content > small:first-of-type {
+  display: block;
+  margin: 1em 0 0;
+}
+.ev-overlay-content .ev-btn {
+  width: 23%;
+}
+
+ul.ev-user p.results {
+  border: 1px solid #bebebe;
+  font-weight: bold;
+  margin: 0.25em 1em;
+  padding: 0.25em 0.5em;
+  position: relative;
+  text-align: left;
+}
+p.results span.text {
+  font-style: normal;
+  position: relative;
+  z-index: 1;
+}
+p.results span.finalist {
+  background: #00BD3F;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: width 1s ease;
+  width: 0;
+}
+
+.ev-btn {
+  background: #00BD3F;
+  -moz-box-shadow: 0 6px #0B702D;
+  -webkit-box-shadow: 0 6px #0B702D;
+  box-shadow: 0 6px #0B702D;
+  border-radius: 2px;
+  color: #fff !important;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 0.25em;
+  padding: 1em 2em;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+}
+.ev-btn:hover {
+  -moz-box-shadow: 0 4px #0B702D;
+  -webkit-box-shadow: 0 4px #0B702D;
+  box-shadow: 0 4px #0B702D;
+  top: 2px;
+}
+.ev-btn:active {
+  -moz-box-shadow: 0 0 transparent;
+  -webkit-box-shadow: 0 0 transparent;
+  box-shadow: 0 0 transparent;
+  top: 6px;
+}
+ul.ev-user > li:not(.active) > .ev-btn,
+.ev-vote-cancel {
+  background: #aeaeae;
+  -moz-box-shadow: 0 6px #666;
+  -webkit-box-shadow: 0 6px #666;
+  box-shadow: 0 6px #666;
+  transition: all 0s ease-in-out;
+}
+.ev-vote-cancel:hover {
+  -moz-box-shadow: 0 4px #666;
+  -webkit-box-shadow: 0 4px #666;
+  box-shadow: 0 4px #666;
+  top: 2px;
+}
+.ev-vote-cancel:active {
+  -moz-box-shadow: 0 0 transparent;
+  -webkit-box-shadow: 0 0 transparent;
+  box-shadow: 0 0 transparent;
+  top: 6px;
+}
+
+.newsletter-header {
+  text-align: center;
+}
+.newsletter-header .hr-logo {
+  background: url('/Portals/13/hr_logo_small.png');
+  display: inline-block;
+  height: 30px;
+  text-indent: -20000px;
+  width: 180px;
+}
+.voting-wrapper .dnnForm .field-wrapper {
+  display: inline-block;
+  margin-right: 1em;
+  overflow: hidden;
+  text-align: left;
+}
+.voting-wrapper .dnnForm .field-wrapper:last-child {
+  margin-right: 0;
+}
+.voting-wrapper .dnnForm .field-wrapper select {
+  width: 130px;
+}
+.voting-wrapper .dnnForm .field-wrapper .btn {
+  box-shadow: none;
+  display: block;
+}
+#divpp_350_RidingDiscipline {
+  margin-top: 0.2em;
+}
+#divForm2324 {
+  text-align: center;
+}
+.DnnModule-2324 {
+  margin-bottom: 0;
+}
+@media all and (max-width: 980px) {
+  ul.ev-content {
+    padding: 1em;
+  }
+}
+@media all and (max-width: 800px) {
+  .ev-header h2 {
+    font-size: 1.75em;
+  }
+  ul.ev-user li h3 {
+    font-size: 1.25em;
+  }
+  .ev-user .ev-headshot,
+  .ev-user li.active .ev-headshot {
+    background-size: 130px;
+    height: 130px;
+    width: 130px;
+  }
+  .ev-user .ev-headshot img {
+    height: 120px;
+    width: 120px;
+  }
+  .ev-btn {
+    font-size: 0.75em;
+  }
+  .ev-video iframe {
+    max-width: 90%;
+  }
+}
+@media all and (max-width: 700px) {
+  .front #header {
+    text-align: center;
+  }
+  .vote-now.btn {
+    margin: 0;
+  }
+}
+@media all and (max-width: 600px) {
+  .ev-header p {
+    font-size: 0.9em;
+    margin: 1em;
+  }
+  .ev-user {
+    display: none;
+  }
+  ul.ev-content > li {
+    border-bottom: 1px dashed #666;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  ul.ev-content > li:last-of-type {
+    border-bottom: none;
+  }
+  ul.ev-social {
+    margin: 0 0 0.5em 0.5em;
+    padding: 0 0.5em 0 0.25em;
+  }
+  ul.ev-social li {
+    display: block;
+  }
+  ul.ev-social li h4 {
+    font-size: 1em;
+  }
+  ul.ev-content li .ev-content-body {
+    display: block !important;
+  }
+  .ev-content-body > h3 {
+    font-size: 1.35em;
+    line-height: 1.35;
+    padding-top: 0.5em;
+  }
+  .ev-headshot,
+  li.active .ev-headshot {
+    background: url('http://bl.qa.equisearch.com/Portals/13/headshot_bg.png') no-repeat 0 0;
+    background-size: 130px;
+    height: 130px;
+    width: 130px;
+  }
+  .ev-headshot img {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+
+
+
+
+
+#wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
