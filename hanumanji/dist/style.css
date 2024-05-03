@@ -1,0 +1,26 @@
+body {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text {
+  position: absolute;
+  padding: 1px;
+  text-align: center;
+  text-wrap: balance;
+  width: 200px;
+  background-color: white;
+  text-transform: lowercase;
+}
+
+img {
+  z-index: 9900;
+  max-width: 170px;
+  filter: drop-shadow(0px -18px 12px white);
+}
