@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Cake</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+  .hidden-text{
+    font-size: 30px;
+  }
+</style>
+<body>
+  <div class="cake" id="cake">
+    <div class="velas">
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+    </div>
+    <div class="cobertura"></div>
+    <div class="bizcocho"></div>
+    <h1>Microsoft Wale!</h1>
+    <!-- <p>TO ME</p> -->
+    <p class="hidden-text" style="display: none;">congratulations YASHI 28 Days Goto </p>
+  </div>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('.fuego').hide(); // Hide the fire after 5 seconds
+        $('.hidden-text').show(); // Show the hidden text after 5 seconds
+      }, 5000);
+
+      $('#cake').on('click', function(){
+        if ($('.fuego').is(':hidden')) { // Check if the fire is hidden
+          eatCake(); // Call the function to eat the cake
+        } else {
+          $('.fuego').hide(); // Hide the fire when cake is clicked
+          $('.hidden-text').show(); // Show the hidden text when cake is clicked
+        }
+      });
+    });
+
+    function eatCake() {
+      // Check if there are any cake pieces left
+      if ($('.cake-piece').length > 0) {
+        // Remove the first cake piece
+        $('.cake-piece:first').remove();
+      } else {
+        // If no cake pieces left, show an alert or perform any other action
+        alert('All pieces eaten!');
+      }
+    }
+  </script>
+</body>
+</html>
