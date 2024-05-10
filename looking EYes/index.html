@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        svg:nth-of-type(1) {
+            transform: translate(0%,-50%);
+        }
+        svg:nth-of-type(2) {
+            transform: translate(-100%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <radialGradient id="myGradient" fx="50%" fy="50%">
+                <stop offset="0%" stop-color="#000" />
+                <stop offset="20%" stop-color="#000" />
+                <stop offset="22%" stop-color="lightyellow" />
+                <stop offset="32%" stop-color="lightblue" />
+                <stop offset="40%" stop-color="steelblue" />
+                <stop offset="42%" stop-color="#fff" />
+                <stop offset="90%" stop-color="#fff" />
+                <stop offset="98%" stop-color="#f00" />
+                <stop offset="100%" stop-color="#000" />
+                <animate attributeName="fx" values="30%; 70%; 30%" dur="2s" begin="-.25s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines="0.05 0.94 0.9 0.1;0.05 0.94 0.9 0.1" calcMode="spline" />
+                <animate attributeName="fy" values="30%; 70%; 30%" dur="3s" begin="-1s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines="0.05 0.94 0.9 0.1;0.05 0.94 0.9 0.1" calcMode="spline" />
+            </radialGradient>
+        </defs>
+        <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+    </svg>
+    
+    <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <radialGradient id="myGradient2" fx="50%" fy="50%">
+                <stop offset="0%" stop-color="#000" />
+                <stop offset="20%" stop-color="#000" />
+                <stop offset="22%" stop-color="lightyellow" />
+                <stop offset="32%" stop-color="lightblue" />
+                <stop offset="40%" stop-color="steelblue" />
+                <stop offset="42%" stop-color="#fff" />
+                <stop offset="90%" stop-color="#fff" />
+                <stop offset="98%" stop-color="#f00" />
+                <stop offset="100%" stop-color="#000" />
+                <animate attributeName="fx" values="30%; 70%; 30%" dur="2s" begin="-.1s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines="0.05 0.94 0.9 0.1;0.05 0.94 0.9 0.1" calcMode="spline" />
+                <animate attributeName="fy" values="30%; 70%; 30%" dur="3s" begin="-1.1s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines="0.05 0.94 0.9 0.1;0.05 0.94 0.9 0.1" calcMode="spline" />
+            </radialGradient>
+        </defs>
+        <circle cx="5" cy="5" r="4" fill="url('#myGradient2')" />
+    </svg>
+</body>
+</html>
