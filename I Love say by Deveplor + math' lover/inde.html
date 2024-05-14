@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Graph of y = 1/x</title>
+<style>
+    p{
+        font-size: 100px;
+        font-weight: 900;
+        margin-top: 20%;
+        justify-content: space-between;
+
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        text-align: center;
+       
+        justify-content: center;
+    }
+   
+    body{
+  
+      
+        background-image: url('./romatic.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container {
+        display: flex;
+        flex-direction: row; /* Stack children vertically */
+        align-items: center;    /* Center-align items */
+        text-align: center;     /* Center-align text for each child */
+    }
+    .canvas-container {
+        margin-bottom: 20px; /* Spacing between each canvas group */
+    }
+  canvas {
+    margin-top: 20%;
+    border: 1px solid black;
+  }
+  .container{
+    display: flex;
+  }
+  
+</style>
+</head>
+<h1>
+    MAth's Lover + Developer Purpose Your Cursh
+    
+</h1>
+<hr>
+<body>
+ 
+
+   <div class="container">
+    
+    <p>I</p>&nbsp; &nbsp; 
+    &nbsp; 
+    <div class="canvas-container">
+        
+        <canvas id="graph" width="300" height="200"></canvas>
+       
+        <h2 >Y = 1/x</h2>
+    </div>
+    <div class="canvas-container">
+        <canvas id="circleCanvas" width="300" height="200"></canvas>
+        <h2>X**2 + Y = 3</h2>
+    </div>
+    <div class="canvas-container">
+        <canvas id="graphCanvas" width="300" height="200"></canvas>
+        <h2>Y = 4x</h2>
+    </div>
+    <div class="canvas-container">
+        <canvas id="axisCanvas" width="300" height="200"></canvas>
+        <h2>x = siny</h2>
+
+    </div>
+    &nbsp; &nbsp; 
+        <p>You</p>
+</div>
+<script src="graph.js"></script>
+</body>
+</html>
