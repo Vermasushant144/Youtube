@@ -1,0 +1,19 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  background: #171838;
+}
+
+canvas {
+  margin: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+}
