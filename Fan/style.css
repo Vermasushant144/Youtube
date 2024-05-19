@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.fan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fan {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  
+    overflow: hidden;
+}
+
+.blade {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: #007BFF;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.blade1 {
+    transform: rotate(0deg);
+}
+
+.blade2 {
+    transform: rotate(120deg);
+}
+
+.blade3 {
+    transform: rotate(240deg);
+}
+
+.center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input, button, .power-indicator {
+    margin-top: 10px;
+}
+
+@keyframes rotateFan {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fan.rotate {
+    animation: rotateFan linear infinite;
+}
+
+.power-indicator {
+    font-weight: bold;
+    color: #d9534f;
+}
