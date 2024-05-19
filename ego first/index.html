@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 50px;
+            padding: 20px;
+        }
+        input{
+            size: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 23%;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            transition: border-color 0.3s;
+        }
+
+        input[type="radio"]:checked + label:after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        label:hover {
+            color: #ccc;
+        }
+
+        label:hover:before {
+            border-color: #aaa;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Care</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Fear</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Respect</label><br>
+        <br>
+        <input type="radio" id="Self Respect" name="gender" value="Self Respect">
+        <label for="Self Respect">Self Respect</label>
+        <input type="radio" id="Encourage" name="gender" value="Encourage">
+        <label for="Encourage">Encourage</label>
+        <input type="radio" id="EGO" name="gender" value="EGO" onclick="disableAll()">
+        <label for="EGO">EGO</label>
+    </form>
+
+    <script>
+        function disableAll() {
+            var radios = document.querySelectorAll('input[type="radio"]');
+            for (var i = 0; i < radios.length; i++) {
+                radios[i].disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
