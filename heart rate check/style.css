@@ -1,0 +1,217 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: 
+      linear-gradient(45deg, #ff8a00, #da1b60),
+      url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; /* Overlay blend mode */
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Your existing styles */
+  }
+  
+  .centered-heading {
+    margin-top: 0; /* Reset the margin */
+    text-align: center; /* Center the text */
+  }
+  
+  .super-advanced-lover-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(to right, #ff69b4, #ff79a7); /* Pink gradient */
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .super-advanced-lover-button:before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff79a7, #ff69b4); /* Opposite gradient */
+    border-radius: 25px;
+    z-index: -1;
+    transition: top 0.5s ease;
+  }
+  
+  .super-advanced-lover-button:hover:before {
+    top: 0;
+  }
+  
+  .super-advanced-lover-button:hover {
+    background: linear-gradient(to right, #ff79a7, #ff69b4); /* Swap gradients on hover */
+    border-color: #ff69b4; /* Pink border */
+    box-shadow: 0 0 10px #ff69b4; /* Pink glow */
+  }
+  
+  .super-advanced-lover-button span {
+    display: inline-block;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #ff69b4, #ff79a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.5s ease;
+  }
+  
+  .super-advanced-lover-button:hover span {
+    background: linear-gradient(to right, #ff79a7, #ff69b4);
+  }
+  .animated-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .animated-button:before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0056b3;
+    border-radius: 50px;
+    z-index: -1;
+    transition: top 0.3s ease;
+  }
+  
+  .animated-button:hover:before {
+    top: 0;
+  }
+  
+  .animated-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+  }
+  
+  .animated-button:active {
+    box-shadow: 0 2px 0 #006599;
+    transform: translateY(3px);
+  }
+  
+  
+
+  .heart-rate {
+    max-width: 180px;
+    height: 143px;
+    position: relative;
+    margin:0px auto;
+    top:160px;
+    overflow:hidden;
+        
+    }
+    
+    .fade-in {
+      position: absolute;
+      width: 100%;
+      height:100%;
+      background-color: white;
+      top: 0;
+      right: 0;
+      animation: heartRateIn 4.5s linear infinite;
+    
+     /* Gia na katalavw ti ginetai des auto
+        border:1px solid red;
+        */
+    
+    }
+    
+    .fade-out {
+      position: absolute;
+      width: 120%;
+      height: 100%;
+      top: 0;
+      left: -120%;
+      animation: heartRateOut 4.5s linear infinite;
+      background: rgba(255, 255, 255, 1);
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+      background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+      background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+    
+    @keyframes heartRateIn {
+      0% {
+        width: 100%;
+      }
+      50% {
+        width: 0%;
+      }
+      100% {
+        width: 0;
+      }
+    }
+    
+    @keyframes heartRateOut {
+      0% {
+        left: -120%;
+      }
+      30% {
+        left: -120%;
+      }
+      100% {
+        left: 0;
+      }
+    }
+
+
+
+    svg {
+        width: 100%;
+        height: 100%;
+      /*   filter: drop-shadow(0 10px 10px #d60000); */
+      }
+      svg path {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: line 3s cubic-bezier(.7,.3,.3,.6) infinite;
+      }
+      
+      @keyframes line {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      
