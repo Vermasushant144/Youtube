@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 300px;
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-content {
+    position: relative;
+}
+
+.molecule {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.segment {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: relative;
+    animation: float 2s infinite;
+}
+
+.segment:nth-child(odd) {
+    background-color: #ffd1dc;
+}
+
+.segment:after {
+    content: '❤️';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.text {
+    font-size: 18px;
+}
+
+.highlight {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.footer {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
