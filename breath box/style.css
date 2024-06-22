@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #32CD32; /* Lime green color */
+    text-shadow: 2px 2px 4px #000000; /* Subtle shadow for better readability */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+canvas {
+    background: black;
+    display: block;
+    margin: 0 auto;
+}
+
+.labels {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 240px;  /* Increased width for better spacing */
+    height: 240px; /* Increased height for better spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#inhale {
+    top: -50px;  /* Moved further up */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hold1 {
+    top: 50%;
+    right: -90px;  /* Moved further to the right */
+    transform: translateY(-50%);
+}
+
+#exhale {
+    bottom: -50px;  /* Moved further down */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hold2 {
+    top: 50%;
+    left: -90px;  /* Moved further to the left */
+    transform: translateY(-50%);
+}
+
+.technique {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
