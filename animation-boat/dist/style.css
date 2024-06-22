@@ -1,0 +1,354 @@
+:root {
+  --wave-speed: 10s;
+  --boat-width: 14em;
+
+  --wave-front: #3498db;
+  --wave-back: #2980b9;
+  --sky1: #87CEFA;
+  --sky2: #B0E0E6;
+  --hull: #2C3E50;
+  --mast: #34495E;
+  --sail: #ecf0f1;
+  --flag: #e74c3c;
+  --rain-color: #a0c4ff;
+}
+
+body, html {
+  min-height: 100%;
+  height: 100%;
+}
+
+html {
+  background: var(--sky1);
+}
+
+body {
+  background: linear-gradient(to bottom, var(--sky1) 0%, var(--sky2) 100%);
+  overflow: hidden;
+}
+
+.boat {
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  margin-left: calc(-1 * var(--boat-width) / 2);
+  animation: boat calc(var(--wave-speed) * 0.125) linear alternate infinite;
+  animation-delay: -0.33s;
+}
+
+.hull {
+  position: relative;
+  height: 0em;
+  width: var(--boat-width);
+  border-bottom: 5em solid var(--hull);
+  background: var(--hull);
+  border-radius: 0 0 calc(var(--boat-width) * 2) calc(var(--boat-width) * 2);
+}
+
+.mast {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.25em;
+  background: var(--mast);
+  width: 0.5em;
+  height: 15em;
+  z-index: -1;
+}
+
+.sail {
+  top: 2em;
+  margin-left: 0.5em;
+  width: 0;
+  height: 0;
+  border-bottom: 7em solid var(--sail);
+  border-right: 4em solid transparent;
+  position: absolute;
+}
+
+.sail::after {
+  margin-left: 0.75em;
+  width: 0;
+  height: 0;
+  border-bottom: 6em solid var(--sail);
+  border-left: 4em solid transparent;
+  content: '';
+  display: block;
+  position: absolute;
+  left: -5.25em;
+  top: 1.1em;
+}
+
+.flag {
+  position: absolute;
+  width: 3em;
+  height: 2em;
+  background: var(--flag);
+  top: 0;
+  right: 0.5em;
+}
+
+.skull {
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  top: 13%;
+}
+
+.skull::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  background: white;
+  width: 24px;
+  height: 10px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 100%;
+}
+
+.eye {
+  position: absolute;
+  background: var(--flag);
+  height: 8px;
+  width: 4px;
+  border-radius: 100%;
+  top: 5px;
+  z-index: 100;
+}
+
+.eye:first-child {
+  right: 50%;
+  margin-right: 2px;
+}
+
+.eye:last-child {
+  left: 50%;
+  margin-left: 2px;
+}
+
+.teeth {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  right: -1px;
+}
+
+.tooth {
+  background: #fff;
+  height: 6px;
+  width: 3px;
+  margin: 0 1px 0 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.waves {
+  height: 33.3%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.waves-back {
+  height: 36%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.wave-back {
+  position: absolute;
+  bottom: 0;
+  width: 85%;
+  height: 100%;
+  background: var(--wave-back);
+  border-radius: 100% 100% 0 0;
+  animation: wave calc(var(--wave-speed) * 1.35) linear infinite;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 85%;
+  height: 100%;
+  background: var(--wave-front);
+  border-radius: 100% 100% 0 0;
+  animation: wave var(--wave-speed) linear infinite;
+}
+
+.wave:nth-child(1),
+.wave-back:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.wave:nth-child(2),
+.wave-back:nth-child(2) {
+  animation-delay: calc(var(--wave-speed) * -0.25);
+}
+
+.wave:nth-child(3),
+.wave-back:nth-child(3) {
+  animation-delay: calc(var(--wave-speed) * -0.5);
+}
+
+.wave:nth-child(4),
+.wave-back:nth-child(4) {
+  animation-delay: calc(var(--wave-speed) * -0.75);
+}
+
+.wave:nth-child(5),
+.wave-back:nth-child(5) {
+  animation-delay: calc(var(--wave-speed) * -1);
+}
+
+@keyframes wave {
+  0% {
+    left: 155%;
+  }
+  100% {
+    left: -155%;
+  }
+}
+
+@keyframes boat {
+  0% {
+    bottom: 30%;
+  }
+  100% {
+    bottom: 20%;
+  }
+}
+
+.rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.raindrop {
+  position: absolute;
+  top: -5%;
+  width: 2px;
+  height: 15px;
+  background: var(--rain-color);
+  opacity: 0.6;
+  animation: rain linear infinite;
+}
+
+.raindrop:nth-child(1) {
+  left: 10%;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+}
+
+.raindrop:nth-child(2) {
+  left: 20%;
+  animation-duration: 0.6s;
+  animation-delay: 0.2s;
+}
+
+.raindrop:nth-child(3) {
+  left: 30%;
+  animation-duration: 0.7s;
+  animation-delay: 0.4s;
+}
+
+.raindrop:nth-child(4) {
+  left: 40%;
+  animation-duration: 0.8s;
+  animation-delay: 0.6s;
+}
+
+.raindrop:nth-child(5) {
+  left: 50%;
+  animation-duration: 0.9s;
+  animation-delay: 0.8s;
+}
+
+.raindrop:nth-child(6) {
+  left: 60%;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+.raindrop:nth-child(7) {
+  left: 70%;
+  animation-duration: 1.1s;
+  animation-delay: 1.2s;
+}
+
+.raindrop:nth-child(8) {
+  left: 80%;
+  animation-duration: 1.2s;
+  animation-delay: 1.4s;
+}
+
+.raindrop:nth-child(9) {
+  left: 90%;
+  animation-duration: 1.3s;
+  animation-delay: 1.6s;
+}
+
+.raindrop:nth-child(10) {
+  left: 100%;
+  animation-duration: 1.4s;
+  animation-delay: 1.8s;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.author {
+  position: absolute;
+  right: 1em;
+  bottom: 0.5em;
+  color: var(--sail);
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: var(--flag);
+}
+/* Add your existing boat and wave animations CSS here */
+
+/* Rain animation */
+.raindrop {
+  position: absolute;
+  top: -10%;
+  width: 2px;
+  height: 20px;
+  background: #a0c4ff;
+  animation: rain 2s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0) rotateZ(15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotateZ(15deg);
+    opacity: 0;
+  }
+}
