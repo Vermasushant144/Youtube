@@ -1,0 +1,98 @@
+.airplane {
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background: url('./file\ \(1\).png') no-repeat center center;
+    background-size: contain;
+    top: 50%;
+    left: -160px;
+    transform: translateY(-50%);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#stopButton {
+    background-color: #f44336;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#sky {
+    overflow: hidden;
+    position: relative;
+    background: #C6D9E8;
+    background: -webkit-linear-gradient(top, #C6D9E8 0%, #fff 100%);
+    background: linear-gradient(top, #C6D9E8 0%, #fff 100%);
+    background: -moz-linear-gradient(top, #C6D9E8 0%, #fff 100%);
+    height: 400px;
+}
+
+.cloud {
+    position: absolute;
+    background-image: url('https://www.dl.dropboxusercontent.com/s/31ivp5fsjcgytgp/cloud1.png');
+    background-repeat: no-repeat;
+    width: 176px;
+    height: 114px;
+}
+
+/* Define cloud styles here */
+
+#aeroplane {
+    position: absolute;
+    background-image: url('./file\ \(1\).png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 70px;
+}
+
+/* Define airplane styles here */
+
+/* Define keyframes here */
+
+.container {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Align buttons horizontally in the center */
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#stopButton {
+    background-color: #f44336;
+}
+.buttons {
+    display: flex;
+    justify-content: center; /* Align buttons horizontally in the center */
+    margin-top: 40px; /* Increase the margin */
+}
