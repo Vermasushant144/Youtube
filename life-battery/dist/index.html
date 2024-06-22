@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Meter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #percentage{
+        margin-top:-200px;
+      }
+        @keyframes fillBattery {
+            0% {
+                height: 0%;
+            }
+            100% {
+                height: 100%;
+            }
+        }
+
+        @keyframes textAppear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .battery-fill {
+            animation: fillBattery 5s forwards;
+        }
+
+        /* Adjusted the styles for better alignment */
+        .battery-text {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            color: white;
+            animation: textAppear 2s ease-out forwards;
+        }
+
+        .battery-text > div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+    <div class="flex flex-col items-center justify-center relative">
+        <h1 class="text-4xl font-bold mb-8 text-purple-400">Success</h1>
+        <div class="relative w-40 h-80 bg-gradient-to-b from-purple-600 to-black border-4 border-gray-700 rounded-lg flex items-center justify-center shadow-lg">
+            <div class="battery-fill absolute bottom-0 left-0 w-full bg-purple-400"></div>
+            <span id="percentage" class="text-3xl font-bold z-20">0%</span>
+            <div class="battery-text">
+                <div class="flex items-center justify-center">
+                    <div class="w-8 h-4 bg-gray-700 rounded-r-lg"></div>
+                    <span class="ml-2 text-sm font-semibold">Risks</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <span class="mr-2 text-sm font-semibold">Consistency</span>
+                    <div class="w-8 h-4 bg-gray-700 rounded-l-lg"></div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="w-8 h-4 bg-gray-700 rounded-r-lg"></div>
+                    <span class="ml-2 text-sm font-semibold">Hard work</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <span class="mr-2 text-sm font-semibold">Patience</span>
+                    <div class="w-8 h-4 bg-gray-700 rounded-l-lg"></div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="w-8 h-4 bg-gray-700 rounded-b-lg"></div>
+                    <span class="mt-2 text-sm font-semibold">Discipline</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript to animate the percentage
+        let percentageElement = document.getElementById('percentage');
+        let percentage = 0;
+
+        function updatePercentage() {
+            percentage++;
+            percentageElement.textContent = percentage + '%';
+            if (percentage < 100) {
+                setTimeout(updatePercentage, 50);
+            }
+        }
+
+        window.onload = function() {
+            document.querySelector('.battery-fill').classList.add('battery-fill');
+            updatePercentage();
+        };
+    </script>
+</body>
+</html>
