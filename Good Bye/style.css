@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial, sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.message {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.goodbye {
+    font-size: 3em;
+    margin: 0;
+    animation: textGlow 1.5s infinite alternate;
+}
+
+.congrats {
+    font-size: 2em;
+    margin: 0;
+    animation: textGlow 1.5s infinite alternate 0.75s;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #ff7e5f;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    z-index: 3;
+    position: relative;
+}
+
+button:hover {
+    background-color: #ff7e5f;
+    color: white;
+    transform: scale(1.1);
+}
+
+#confettiCanvas, #particlesCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
