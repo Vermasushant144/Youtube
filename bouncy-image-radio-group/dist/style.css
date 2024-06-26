@@ -1,0 +1,72 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@layer demo {
+  fieldset {
+    grid-template-columns: repeat(5,auto);
+    
+    @media (prefers-reduced-motion: no-preference) {
+      label {
+        transition:  2s var(--ease-spring-5);
+      }
+    }
+    
+    > label {
+      background: var(--_img) 50%/cover;
+      width: 0;
+      min-width: 100%;
+    }
+    > label:has(input:checked) {
+      width: 18vw;
+    }
+    > label:has(input:checked) + *
+    /*> label:has(+ label:has(input:checked)) */{
+      width: 8vw;
+    }
+    /* a hacky way to get all the cases*/
+    &:has(label:nth-child(2) > input:checked) label:nth-child(1),
+    &:has(label:nth-child(3) > input:checked) label:nth-child(2),
+    &:has(label:nth-child(4) > input:checked) label:nth-child(3),
+    &:has(label:nth-child(5) > input:checked) label:nth-child(4){
+      width: 8vw;
+    }
+  }
+}
+
+@layer demo.support {
+  html {
+    background: var(--gradient-9);
+    block-size: 100%;
+  }
+  
+  body {
+    min-block-size: 100%;
+    display: grid;
+    place-content: center;
+    padding: var(--size-5);
+    gap: var(--size-5);
+  }
+  
+  fieldset {
+    inline-size: 80vw;
+    
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 50vh;
+    gap: var(--size-3);
+    border: none;
+    
+    > label {
+      cursor: pointer;
+      border-radius: var(--radius-4);
+      
+      &:focus-within {
+        outline: 1px solid Highlight;
+        outline-offset: 5px;
+      }
+      
+      > input {
+        opacity: 0;
+      }
+    }
+  }
+}
