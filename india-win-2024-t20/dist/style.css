@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Initial background color */
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+}
+
+.text {
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.highlight {
+    font-size: 5rem;
+    color: #ff9933; /* Saffron color */
+    transition: color 1.5s ease-in-out, font-size 1.5s ease-in-out;
+}
+
+#text1 {
+    opacity: 1;
+    transform: scale(1);
+    color: #333;
+    animation: holdI 2s forwards, fadeOutWN 2s 2s forwards;
+}
+
+#text2 {
+    opacity: 0;
+    color: #138808; /* Green color */
+    transform: scale(0.5);
+    animation: fadeInIndia 2s 4s forwards infinite alternate;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes holdI {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeOutWN {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInIndia {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        color: #138808; /* Green color */
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+body.flag-colors {
+    animation: gradientChange 10s infinite alternate;
+}
+
+@keyframes gradientChange {
+    0% {
+        background: linear-gradient(180deg, #ff9933 0%, #ffffff 25%, #ffffff 75%, #138808 100%);
+    }
+    25% {
+        background: linear-gradient(180deg, #ffffff 0%, #138808 25%, #138808 75%, #ff9933 100%);
+    }
+    50% {
+        background: linear-gradient(180deg, #138808 0%, #ff9933 25%, #ff9933 75%, #ffffff 100%);
+    }
+    75% {
+        background: linear-gradient(180deg, #ff9933 0%, #ffffff 25%, #ffffff 75%, #138808 100%);
+    }
+    100% {
+        background: linear-gradient(180deg, #ffffff 0%, #138808 25%, #138808 75%, #ff9933 100%);
+    }
+}
