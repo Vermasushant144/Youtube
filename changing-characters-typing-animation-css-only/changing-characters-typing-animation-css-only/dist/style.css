@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IM Fell English', serif;
+  background-image: repeating-linear-gradient(60deg, #000 0px, #222 2px, #000 4px);
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  left: 50%; top: -0.5em;
+  font: inherit;
+  font-size: 4em;
+  color: #444;
+  background: none;
+  border: none;
+  translate: -50% -50%;
+  opacity: 0.5;
+  -webkit-animation: restart 1s 16s forwards;
+          animation: restart 1s 16s forwards;
+  transition: color 0.3s;
+  
+  &:hover {
+    color: #aaa;
+  }
+  
+  &:active {
+    opacity: 1;
+    color: #fff;
+    
+    &, & ~ .typing::before, & ~ .typing::after {
+      -webkit-animation: none;
+              animation: none;
+    }
+  }
+}
+
+@-webkit-keyframes restart {
+  to { color: #fff; }
+}
+
+@keyframes restart {
+  to { color: #fff; }
+}
+
+.typing {
+  font-size: 48px;
+  text-align: center;
+  
+  &::before {
+    content: '';
+    -webkit-animation: text 14.5s 1s step-end forwards;
+            animation: text 14.5s 1s step-end forwards;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    translate: -0.2em;
+    -webkit-animation: chars 5s 0.5s step-end 3;
+            animation: chars 5s 0.5s step-end 3;
+  }
+}
+
+@-webkit-keyframes text {
+  0%  { content: 'L'; }
+  2%  { content: 'Lo'; }
+  4%  { content: 'Lor'; }
+  6%  { content: 'Lore'; }
+  8%  { content: 'Lorem'; }
+  10%  { content: 'Lorem '; }
+  12%  { content: 'Lorem i'; }
+  14%  { content: 'Lorem ip'; }
+  16%  { content: 'Lorem ips'; }
+  18%  { content: 'Lorem ipsu'; }
+  20%  { content: 'Lorem ipsum'; }
+  22%  { content: 'Lorem ipsum '; }
+  24%  { content: 'Lorem ipsum d'; }
+  26%  { content: 'Lorem ipsum do'; }
+  28%  { content: 'Lorem ipsum dol'; }
+  30%  { content: 'Lorem ipsum dolo'; }
+  32%  { content: 'Lorem ipsum dolor'; }
+  34%  { content: 'Lorem ipsum dolor '; }
+  36%  { content: 'Lorem ipsum dolor s'; }
+  38%  { content: 'Lorem ipsum dolor si'; }
+  40%  { content: 'Lorem ipsum dolor sit'; }
+  42%  { content: 'Lorem ipsum dolor sit '; }
+  44%  { content: 'Lorem ipsum dolor sit a'; }
+  46%  { content: 'Lorem ipsum dolor sit am'; }
+  48%  { content: 'Lorem ipsum dolor sit ame'; }
+  50%  { content: 'Lorem ipsum dolor sit amet'; }
+  52%  { content: 'Lorem ipsum dolor sit amet '; }
+  54%  { content: 'Lorem ipsum dolor sit amet c'; }
+  56%  { content: 'Lorem ipsum dolor sit amet co'; }
+  58%  { content: 'Lorem ipsum dolor sit amet con'; }
+  60%  { content: 'Lorem ipsum dolor sit amet cons'; }
+  62%  { content: 'Lorem ipsum dolor sit amet conse'; }
+  64%  { content: 'Lorem ipsum dolor sit amet consec'; }
+  66%  { content: 'Lorem ipsum dolor sit amet consect'; }
+  68%  { content: 'Lorem ipsum dolor sit amet consecte'; }
+  70%  { content: 'Lorem ipsum dolor sit amet consectet'; }
+  72%  { content: 'Lorem ipsum dolor sit amet consectetu'; }
+  74%  { content: 'Lorem ipsum dolor sit amet consectetur'; }
+  76%  { content: 'Lorem ipsum dolor sit amet consectetur,'; }
+  78%  { content: 'Lorem ipsum dolor sit amet consectetur, '; }
+  80%  { content: 'Lorem ipsum dolor sit amet consectetur, a'; }
+  82%  { content: 'Lorem ipsum dolor sit amet consectetur, ad'; }
+  84%  { content: 'Lorem ipsum dolor sit amet consectetur, adi'; }
+  86%  { content: 'Lorem ipsum dolor sit amet consectetur, adip'; }
+  88%  { content: 'Lorem ipsum dolor sit amet consectetur, adipi'; }
+  90%  { content: 'Lorem ipsum dolor sit amet consectetur, adipis'; }
+  92%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisi'; }
+  94%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisic'; }
+  96%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisici'; }
+  98%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisicin'; }
+  100%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisicin.'; }
+}
+
+@keyframes text {
+  0%  { content: 'L'; }
+  2%  { content: 'Lo'; }
+  4%  { content: 'Lor'; }
+  6%  { content: 'Lore'; }
+  8%  { content: 'Lorem'; }
+  10%  { content: 'Lorem '; }
+  12%  { content: 'Lorem i'; }
+  14%  { content: 'Lorem ip'; }
+  16%  { content: 'Lorem ips'; }
+  18%  { content: 'Lorem ipsu'; }
+  20%  { content: 'Lorem ipsum'; }
+  22%  { content: 'Lorem ipsum '; }
+  24%  { content: 'Lorem ipsum d'; }
+  26%  { content: 'Lorem ipsum do'; }
+  28%  { content: 'Lorem ipsum dol'; }
+  30%  { content: 'Lorem ipsum dolo'; }
+  32%  { content: 'Lorem ipsum dolor'; }
+  34%  { content: 'Lorem ipsum dolor '; }
+  36%  { content: 'Lorem ipsum dolor s'; }
+  38%  { content: 'Lorem ipsum dolor si'; }
+  40%  { content: 'Lorem ipsum dolor sit'; }
+  42%  { content: 'Lorem ipsum dolor sit '; }
+  44%  { content: 'Lorem ipsum dolor sit a'; }
+  46%  { content: 'Lorem ipsum dolor sit am'; }
+  48%  { content: 'Lorem ipsum dolor sit ame'; }
+  50%  { content: 'Lorem ipsum dolor sit amet'; }
+  52%  { content: 'Lorem ipsum dolor sit amet '; }
+  54%  { content: 'Lorem ipsum dolor sit amet c'; }
+  56%  { content: 'Lorem ipsum dolor sit amet co'; }
+  58%  { content: 'Lorem ipsum dolor sit amet con'; }
+  60%  { content: 'Lorem ipsum dolor sit amet cons'; }
+  62%  { content: 'Lorem ipsum dolor sit amet conse'; }
+  64%  { content: 'Lorem ipsum dolor sit amet consec'; }
+  66%  { content: 'Lorem ipsum dolor sit amet consect'; }
+  68%  { content: 'Lorem ipsum dolor sit amet consecte'; }
+  70%  { content: 'Lorem ipsum dolor sit amet consectet'; }
+  72%  { content: 'Lorem ipsum dolor sit amet consectetu'; }
+  74%  { content: 'Lorem ipsum dolor sit amet consectetur'; }
+  76%  { content: 'Lorem ipsum dolor sit amet consectetur,'; }
+  78%  { content: 'Lorem ipsum dolor sit amet consectetur, '; }
+  80%  { content: 'Lorem ipsum dolor sit amet consectetur, a'; }
+  82%  { content: 'Lorem ipsum dolor sit amet consectetur, ad'; }
+  84%  { content: 'Lorem ipsum dolor sit amet consectetur, adi'; }
+  86%  { content: 'Lorem ipsum dolor sit amet consectetur, adip'; }
+  88%  { content: 'Lorem ipsum dolor sit amet consectetur, adipi'; }
+  90%  { content: 'Lorem ipsum dolor sit amet consectetur, adipis'; }
+  92%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisi'; }
+  94%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisic'; }
+  96%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisici'; }
+  98%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisicin'; }
+  100%  { content: 'Lorem ipsum dolor sit amet consectetur, adipisicin.'; }
+}
+
+@-webkit-keyframes chars {
+  0%  { content: 'a'; }
+  2%  { content: 'M'; }
+  4%  { content: 'b'; }
+  6%  { content: 'N'; }
+  8%  { content: 'c'; }
+  10%  { content: 'O'; }
+  12%  { content: 'd'; }
+  14%  { content: 'P'; }
+  16%  { content: 'e'; }
+  18%  { content: 'Q'; }
+  20%  { content: 'f'; }
+  22%  { content: 'R'; }
+  24%  { content: 'g'; }
+  26%  { content: 'S'; }
+  28%  { content: 'h'; }
+  30%  { content: 'T'; }
+  32%  { content: 'i'; }
+  34%  { content: 'U'; }
+  36%  { content: 'j'; }
+  38%  { content: 'V'; }
+  40%  { content: 'k'; }
+  42%  { content: 'W'; }
+  44%  { content: 'l'; }
+  46%  { content: 'X'; }
+  48%  { content: 'm'; }
+  50%  { content: 'Y'; }
+  52%  { content: 'n'; }
+  54%  { content: 'Z'; }
+  56%  { content: 'o'; }
+  58%  { content: 'A'; }
+  60%  { content: 'p'; }
+  62%  { content: 'B'; }
+  64%  { content: 'q'; }
+  66%  { content: 'C'; }
+  68%  { content: 'r'; }
+  70%  { content: 'D'; }
+  72%  { content: 's'; }
+  74%  { content: 'E'; }
+  76%  { content: 't'; }
+  78%  { content: 'F'; }
+  80%  { content: 'u'; }
+  82%  { content: 'G'; }
+  84%  { content: 'v'; }
+  86%  { content: 'H'; }
+  88%  { content: 'w'; }
+  90%  { content: 'I'; }
+  92%  { content: 'x'; }
+  94%  { content: 'J'; }
+  96%  { content: 'y'; }
+  98%  { content: 'K'; }
+}
+
+@keyframes chars {
+  0%  { content: 'a'; }
+  2%  { content: 'M'; }
+  4%  { content: 'b'; }
+  6%  { content: 'N'; }
+  8%  { content: 'c'; }
+  10%  { content: 'O'; }
+  12%  { content: 'd'; }
+  14%  { content: 'P'; }
+  16%  { content: 'e'; }
+  18%  { content: 'Q'; }
+  20%  { content: 'f'; }
+  22%  { content: 'R'; }
+  24%  { content: 'g'; }
+  26%  { content: 'S'; }
+  28%  { content: 'h'; }
+  30%  { content: 'T'; }
+  32%  { content: 'i'; }
+  34%  { content: 'U'; }
+  36%  { content: 'j'; }
+  38%  { content: 'V'; }
+  40%  { content: 'k'; }
+  42%  { content: 'W'; }
+  44%  { content: 'l'; }
+  46%  { content: 'X'; }
+  48%  { content: 'm'; }
+  50%  { content: 'Y'; }
+  52%  { content: 'n'; }
+  54%  { content: 'Z'; }
+  56%  { content: 'o'; }
+  58%  { content: 'A'; }
+  60%  { content: 'p'; }
+  62%  { content: 'B'; }
+  64%  { content: 'q'; }
+  66%  { content: 'C'; }
+  68%  { content: 'r'; }
+  70%  { content: 'D'; }
+  72%  { content: 's'; }
+  74%  { content: 'E'; }
+  76%  { content: 't'; }
+  78%  { content: 'F'; }
+  80%  { content: 'u'; }
+  82%  { content: 'G'; }
+  84%  { content: 'v'; }
+  86%  { content: 'H'; }
+  88%  { content: 'w'; }
+  90%  { content: 'I'; }
+  92%  { content: 'x'; }
+  94%  { content: 'J'; }
+  96%  { content: 'y'; }
+  98%  { content: 'K'; }
+}

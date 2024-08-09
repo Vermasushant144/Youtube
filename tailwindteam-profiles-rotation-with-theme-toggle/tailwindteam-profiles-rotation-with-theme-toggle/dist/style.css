@@ -1,0 +1,13 @@
+/*
+* CREDITS:
+* original code for circle placement calculations taken from this codepen:
+* https: //codepen.io/team/keyframers/pen/LYWyrqO
+*/
+.avatar {
+    --radius: 14rem;
+    --d: calc(var(--i) / var(--total));
+    --r-offset: -0.15turn;
+    --r-amount: 1turn;
+    --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+    transform: rotate(var(--r)) translate(var(--radius)) rotate(calc(-1 * var(--r)));
+}
