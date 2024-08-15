@@ -1,0 +1,13 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+.container svg {
+  height: 100%;
+  width: 100%;
+}
+
+#Text * {
+  stroke: #db6e1b;
+  stroke-width: 1px;
+}
